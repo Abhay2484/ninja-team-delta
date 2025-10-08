@@ -3,4 +3,4 @@ Members:- Abhay madhuwan, Ritik, Sakshi pathania ,Vedika dhiman.
 
 Purpose:- Trainig repo for Git/GitHub basics for Ninja Deliveries.
 
-iam Ritik, pursuing MCA, and currently working on a small project for college submission  called Lost and Found System
+"I am Ritik, pursuing MCA from Government College Dharamshala.
