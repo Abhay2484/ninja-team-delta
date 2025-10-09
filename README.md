@@ -3,6 +3,7 @@
 Members:- Abhay madhuwan, Ritik, Sakshi pathania, Vedika dhiman.
 Purpose:- Trainig repo for Git/GitHub basics for Ninja Deliveries.
 
+I am Sakshi Pathania.I love coding.
 
 
 I am Abhay Madhuwan pursuing MCA, and currently in learning phase.
