@@ -1,33 +1,58 @@
-import React, { useState } from 'react';
-import { View, Alert, Text } from 'react-native';
-import FeedbackInput from './feedback_input';
+import { useState } from 'react';
+import { Alert, View } from 'react-native';
 import FeedbackButton from './button';
-import { feedbackStyles } from './styles/feedbackStyles';
+import FeedbackInput from './feedback_input'; 
+import FeedbackList from './feedback_list';
+
 
 export default function App() {
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState<string>('');
+  const [feedbacks, setFeedbacks] = useState<string[]>([]); //  store all submitted feedback
 
   const handleSubmit = () => {
     const trimmed = feedback.trim();
     if (!trimmed) {
-      Alert.alert('Empty Feedback', 'Please enter your feedback before submitting.', [{ text: 'OK' }]);
+      Alert.alert(
+        'Empty Feedback',
+        'Please enter your feedback before submitting.',
+        [{ text: 'OK' }]
+      );
       return;
     }
-    Alert.alert('Feedback Submitted', 'Feedback submitted successfully! 💙', [{ text: 'OK' }]);
+
+    // Add new feedback to the list
+    setFeedbacks([...feedbacks, trimmed]);
+
+    // Clear the input
     setFeedback('');
+
+    Alert.alert(
+      'Feedback Submitted',
+      'Feedback submitted successfully! 💙',
+      [{ text: 'OK' }]
+    );
   };
 
   return (
-    <View style={feedbackStyles.container}>
-      <Text style={feedbackStyles.heading}>💬 Feedback Collector</Text>
-      <Text style={feedbackStyles.teamName}>By Team Delta 💙</Text>
+    <View >
       
+
       <FeedbackInput
         feedback={feedback}
         onChangeFeedback={setFeedback}
         onSubmit={handleSubmit}
       />
-      <FeedbackButton onSubmit={handleSubmit} />
+
+      <FeedbackButton onSubmit={handleSubmit} /> 
+
+      {/* 👇 Display the feedback list dynamically */}
+     
+     
+      <View >
+  <FeedbackList feedbacks={feedbacks} />
+</View>
+
+
     </View>
   );
 }
