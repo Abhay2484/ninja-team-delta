@@ -10,7 +10,7 @@ type FeedbackInputProps = {
 const FeedbackInput = ({ feedback, onChangeFeedback, onSubmit }: FeedbackInputProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>💬 FEEDBACK PLEASE</Text>
+      <Text style={styles.label}>FEEDBACK PLEASE</Text>
 
       <TextInput
         style={styles.input}

@@ -9,7 +9,7 @@ const FeedbackButton = ({ onSubmit }: FeedbackButtonProps) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={onSubmit}>
-        <Text style={styles.text}>Submit ✅</Text>
+        <Text style={styles.text}>Submit</Text>
       </TouchableOpacity>
     </View>
   );
