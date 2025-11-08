@@ -10,7 +10,7 @@ const FeedbackList: React.FC<FeedbackListProps> = ({ feedbacks }) => {
 
   return (
     <View >
-      <Text > Submitted Feedback</Text>
+      <Text > Submitted Feedbacks</Text>
 
       {feedbacks.length === 0 ? (
         <Text >No feedback yet</Text>
