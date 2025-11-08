@@ -13,7 +13,6 @@ import {
 type FeedbackListProps = {
   feedbacks: string[];
 };
-
 const FeedbackList = ({ feedbacks }: FeedbackListProps) => {
   const [filter, setFilter] = useState('');
   const [sortOrder, setSortOrder] = useState<'newest' | 'oldest' | 'alphabetical'>('newest');

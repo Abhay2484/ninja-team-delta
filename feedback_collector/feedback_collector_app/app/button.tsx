@@ -14,6 +14,7 @@ const FeedbackButton = ({ onSubmit }: FeedbackButtonProps) => {
   );
 };
 
+
 const styles = StyleSheet.create({
   container: {
     marginTop: 20,
