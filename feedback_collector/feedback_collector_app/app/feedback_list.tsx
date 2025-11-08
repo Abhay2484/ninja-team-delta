@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 3,
   },
-
   heading: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -70,14 +69,12 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 1,
   },
-
   number: {
     fontSize: 15,
     fontWeight: 'bold',
     color: '#0077B6',
     marginRight: 8,
   },
-
   feedbackText: {
     fontSize: 16,
     color: '#03045E',
