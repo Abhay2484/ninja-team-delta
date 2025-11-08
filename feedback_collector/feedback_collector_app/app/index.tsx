@@ -7,7 +7,7 @@ import FeedbackList from './feedback_list';
 
 export default function App() {
   const [feedback, setFeedback] = useState<string>('');
-  const [feedbacks, setFeedbacks] = useState<string[]>([]); // 👈 store all submitted feedback
+  const [feedbacks, setFeedbacks] = useState<string[]>([]); 
 
   const handleSubmit = () => {
     const trimmed = feedback.trim();
@@ -45,7 +45,7 @@ export default function App() {
 
       <FeedbackButton onSubmit={handleSubmit} />
 
-      {/* 👇 Display the feedback list dynamically */}
+      {/*  Display the feedback list dynamically */}
      
      
       <View >
