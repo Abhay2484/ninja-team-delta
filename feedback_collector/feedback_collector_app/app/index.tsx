@@ -19,8 +19,7 @@ export default function App() {
       );
       return;
     }
-
-    // Add new feedback to the list
+// Add new feedback to the list
     setFeedbacks([...feedbacks, trimmed]);
 
     // Clear the input
