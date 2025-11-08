@@ -21,7 +21,6 @@ export default function App() {
     }
 // Add new feedback to the list
     setFeedbacks([...feedbacks, trimmed]);
-
     // Clear the input
     setFeedback('');
 

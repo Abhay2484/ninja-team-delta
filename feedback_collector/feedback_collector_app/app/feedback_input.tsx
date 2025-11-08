@@ -6,7 +6,6 @@ type FeedbackInputProps = {
   onChangeFeedback: (text: string) => void;
   onSubmit: () => void;
 };
-
 const FeedbackInput = ({ feedback, onChangeFeedback, onSubmit }: FeedbackInputProps) => {
   return (
     <View style={styles.container}>
