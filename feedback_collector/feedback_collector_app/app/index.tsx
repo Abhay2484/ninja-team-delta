@@ -9,7 +9,7 @@ export default function App() {
   const [feedback, setFeedback] = useState<string>('');
   const [feedbacks, setFeedbacks] = useState<string[]>([]); 
 
-  const handleSubmit = () => {
+ const handleSubmit = () => {
     const trimmed = feedback.trim();
     if (!trimmed) {
       Alert.alert(
