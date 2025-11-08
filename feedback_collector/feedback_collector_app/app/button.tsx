@@ -4,7 +4,6 @@ import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 type FeedbackButtonProps = {
   onSubmit: () => void;
 };
-
 const FeedbackButton = ({ onSubmit }: FeedbackButtonProps) => {
   return (
     <View style={styles.container}>

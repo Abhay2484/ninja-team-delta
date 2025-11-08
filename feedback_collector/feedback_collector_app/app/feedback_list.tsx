@@ -10,7 +10,6 @@ import {
   TouchableWithoutFeedback,
   Button,
 } from 'react-native';
-
 type FeedbackListProps = {
   feedbacks: string[];
 };
