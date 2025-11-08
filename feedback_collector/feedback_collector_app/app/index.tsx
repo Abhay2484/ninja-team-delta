@@ -1,34 +1,55 @@
 import React, { useState } from 'react';
-import { View, Alert, Text } from 'react-native'; 
+import { Alert, View } from 'react-native';
+import FeedbackButton from './button';
 import FeedbackInput from './feedback_input';
-
-// import FeedbackButton from './button';
-//import { feedbackStyles } from './styles/feedbackStyles';
+import FeedbackList from './feedback_list';
 
 export default function App() {
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState<string>('');
+  const [feedbacks, setFeedbacks] = useState<string[]>([]);
 
   const handleSubmit = () => {
     const trimmed = feedback.trim();
     if (!trimmed) {
-      Alert.alert('Empty Feedback', 'Please enter your feedback before submitting.', [{ text: 'OK' }]);
+      Alert.alert(
+        'Empty Feedback',
+        'Please enter your feedback before submitting.',
+        [{ text: 'OK' }]
+      );
       return;
     }
-    Alert.alert('Feedback Submitted', 'Feedback submitted successfully! 💙', [{ text: 'OK' }]);
+
+    // Add new feedback to the list
+    setFeedbacks([...feedbacks, trimmed]);
+
+    // Clear the input
     setFeedback('');
+
+    Alert.alert(
+      'Feedback Submitted',
+      'Feedback submitted successfully! ',
+      [{ text: 'OK' }]
+    );
   };
 
   return (
-  //<View style={feedbackStyles.container}></View>
-    <View>
-    {/* <Text style={feedbackStyles.heading}>💬 Feedback Collector</Text>
-    <Text style={feedbackStyles.teamName}>By Team Delta 💙</Text> */}
+    <View style={{ flex: 1, backgroundColor: '#fff', padding: 20 }}>
+      {/* Feedback input box */}
       <FeedbackInput
         feedback={feedback}
         onChangeFeedback={setFeedback}
         onSubmit={handleSubmit}
       />
-      {/* <FeedbackButton onSubmit={handleSubmit} /> */}
+
+      {/* Submit button */}
+      <View style={{ marginTop: 10, marginBottom: 20 }}>
+        <FeedbackButton onSubmit={handleSubmit} />
+      </View>
+
+      {/* Feedback list section */}
+      <View style={{ flex: 1 }}>
+        <FeedbackList feedbacks={feedbacks} />
+      </View>
     </View>
   );
 }
