@@ -3,7 +3,6 @@ import { Alert, View } from 'react-native';
 import FeedbackButton from './button';
 import FeedbackInput from './feedback_input';
 import FeedbackList from './feedback_list';
-
 export default function App() {
   const [feedback, setFeedback] = useState<string>('');
   const [feedbacks, setFeedbacks] = useState<string[]>([]);

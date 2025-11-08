@@ -20,12 +20,12 @@ const FeedbackList = ({ feedbacks }: FeedbackListProps) => {
   const [page, setPage] = useState(1);
   const perPage = 5;
 
-  // 🧠 Filter logic
+  //  Filter logic
   const filteredFeedbacks = feedbacks.filter(fb =>
     fb.toLowerCase().includes(filter.toLowerCase())
   );
 
-  // 🔃 Sort logic
+  //  Sort logic
   const sortedFeedbacks = (() => {
     if (sortOrder === 'alphabetical') {
       return [...filteredFeedbacks].sort((a, b) => a.localeCompare(b));
